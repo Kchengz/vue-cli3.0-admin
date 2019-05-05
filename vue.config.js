@@ -40,7 +40,30 @@ module.exports = {
 
     // 调整内部的 webpack 配置。
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/webpack.md
-    chainWebpack: () => { },
+    chainWebpack: config => { 
+        // 添加新的svg-sprite-loader处理svgIcon
+         config.module 
+         .rule('svgIcon') 
+         .test(/\.svg$/) 
+         .include 
+         .add(resolve('src/icons')) 
+         .end() 
+         .use('svg-sprite-loader')  // 一定要添加use 
+         .loader('svg-sprite-loader') 
+         .tap(options => { 
+           options = { 
+             symbolId: 'icon-[name]' 
+           }  
+           return options 
+         }) 
+         
+         // 原有的svg图像处理loader添加exclude 
+         config.module 
+           .rule('svg') 
+           .exclude 
+           .add(resolve('src/icons')) 
+           .end() 
+     },
     configureWebpack: () => { },
 
     // CSS 相关选项

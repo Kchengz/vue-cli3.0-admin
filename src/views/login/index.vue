@@ -3,25 +3,27 @@
         <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
             <h3 class="title">Randy</h3>
             <el-form-item prop="username">
-                <span class="fontcontainer">
-                    <span class="iconfont icon-yonghu"></span>
-                </span>
+                <span class="svg-container">
+          <svg-icon icon-class="user" />
+        </span>
                 <!-- <span class="svg-container svg-container_login">
                     <svg-icon icon-class="user" />
                 </span> -->
                 <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="username" />
             </el-form-item>
             <el-form-item prop="password">
-                <span class="fontcontainer">
-                    <span class="iconfont icon-mima"></span>
-                </span>
+                <span class="svg-container">
+          <svg-icon icon-class="password" />
+        </span>
                 <!-- <span class="svg-container">
                 <svg-icon icon-class="password"></svg-icon>
                 </span> -->
                 <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on"
                 placeholder="password"></el-input>
                 <!-- <span class="show-pwd" @click="showPwd"><svg-icon icon-class="eye" /></span> -->
-                <span class="show-pwd iconfont icon-yanjing" @click="showPwd"></span>
+                <span class="show-pwd" @click="showPwd">
+                    <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" />
+                </span>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">

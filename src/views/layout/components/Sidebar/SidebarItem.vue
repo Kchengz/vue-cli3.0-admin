@@ -5,7 +5,8 @@
         <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
           <!-- <svg-icon v-if="onlyOneChild.meta&&onlyOneChild.meta.icon" :icon-class="onlyOneChild.meta.icon"></svg-icon> -->
           <i class="fontcontainer">
-              <span class="iconfont" v-if="onlyOneChild.meta&&onlyOneChild.meta.icon" :class="onlyOneChild.meta.icon"></span>
+          <svg-icon v-if="onlyOneChild.meta&&onlyOneChild.meta.icon" :icon-class="onlyOneChild.meta.icon" />
+              <!-- <span class="iconfont" v-if="onlyOneChild.meta&&onlyOneChild.meta.icon" :class="onlyOneChild.meta.icon"></span> -->
           </i>
           <span v-if="onlyOneChild.meta&&onlyOneChild.meta.title" slot="title">{{onlyOneChild.meta.title}}</span>
         </el-menu-item>
@@ -15,7 +16,9 @@
         <template slot="title">
           <!-- <svg-icon v-if="item.meta&&item.meta.icon" :icon-class="item.meta.icon"></svg-icon> -->
           <i class="fontcontainer">
-              <span class="iconfont" v-if="item.meta&&item.meta.icon" :class="item.meta.icon"></span>
+          <svg-icon v-if="item.meta&&item.meta.icon" :icon-class="item.meta.icon" />
+
+              <!-- <span class="iconfont" v-if="item.meta&&item.meta.icon" :class="item.meta.icon"></span> -->
           </i>
           <span v-if="item.meta&&item.meta.title" slot="title">{{item.meta.title}}</span>
         </template>
@@ -27,7 +30,9 @@
             <el-menu-item :index="resolvePath(child.path)">
               <!-- <svg-icon v-if="child.meta&&child.meta.icon" :icon-class="child.meta.icon"></svg-icon> -->
               <i class="fontcontainer">
-                 <span class="iconfont" v-if="child.meta&&child.meta.icon" :class="child.meta.icon"></span>
+          <svg-icon v-if="child.meta&&child.meta.icon" :icon-class="child.meta.icon" />
+
+                 <!-- <span class="iconfont" v-if="child.meta&&child.meta.icon" :class="child.meta.icon"></span> -->
               </i>
               <span v-if="child.meta&&child.meta.title" slot="title">{{child.meta.title}}</span>
             </el-menu-item>
