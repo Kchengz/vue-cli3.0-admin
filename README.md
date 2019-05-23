@@ -9,7 +9,7 @@
  
  <h3><a target="_blank" href="http://www.vueadmin.cn">线上预览地址</a></h3>
   <h3><a target="_blank" href="https://github.com/loveRandy/vue-cli3.0-vueadmin">项目原开源地址</a></h3>
-  原开源项目作者使用的是iconfont引入图标，个人感觉不方便后台添加管理，所以就将原项目项目修改了一下<br>
+  项目原作者使用的是iconfont引入图标，个人感觉不方便后期添加管理，所以就将原项目修改了一下<br>
   此项目只是将原项目的iconfont修改svgIcon组件<br><br>
  注意事项：<br><br>
  1、由于个人风格原因，该项目去掉了eslint限制，需要的同学可以自己增加；<br><br>
