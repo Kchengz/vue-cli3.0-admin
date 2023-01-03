@@ -19,8 +19,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0",
-    "@vue/cli-service": "^3.0.0",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-service": "^5.0.8",
     "node-sass": "^4.9.3",
     "qiniu-webpack-plugin": "^0.4.2",
     "sass-loader": "^7.1.0",
